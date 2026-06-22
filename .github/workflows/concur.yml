@@ -1,0 +1,19 @@
+name: tiemout
+
+on: push
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true           # Cancel older runs on same branch
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10              # Job timeout
+    steps:
+      - name: ⏱️ Step with Timeout
+        timeout-minutes: 1           # Step timeout
+        run: |
+          echo "This step must complete in 2 minutes"
+          sleep 90
+          echo "Completed within time!"
