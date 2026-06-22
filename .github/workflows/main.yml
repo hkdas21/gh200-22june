@@ -8,3 +8,9 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "hello from Himanshu in the GH-200 Session"
+
+      - name: Copy Repo
+        uses: action/checkout@v6
+
+      - name: List Files
+        run: ls -la
