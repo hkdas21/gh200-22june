@@ -17,4 +17,4 @@ jobs:
 
       - name: Generate ASCII Art
         run: |
-          sh /scripts/greet.sh
+          sh $HOME/scripts/greet.sh
