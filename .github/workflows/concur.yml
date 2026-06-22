@@ -12,7 +12,8 @@ jobs:
     timeout-minutes: 10              # Job timeout
     steps:
       - name: ⏱️ Step with Timeout
-        timeout-minutes: 1           # Step timeout
+        timeout-minutes: 1  # Step timeout
+        continue-on-error: true
         run: |
           echo "This step must complete in 1 minutes"
           sleep 90
