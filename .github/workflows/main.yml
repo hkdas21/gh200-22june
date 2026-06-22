@@ -17,5 +17,4 @@ jobs:
 
       - name: Generate ASCII Art
         run: |
-          chmod +x scripts/greet.sh
-          ./scripts/greet.sh
+          sh /scripts/greet.sh
