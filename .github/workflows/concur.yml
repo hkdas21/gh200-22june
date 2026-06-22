@@ -16,7 +16,6 @@ jobs:
         continue-on-error: true
         run: |
           echo "This step must complete in 1 minutes"
-          sleep 90
           echo "Completed within time!"
 
       - name: verify fail
@@ -25,7 +24,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     # Only deploy on push to main, not PRs
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
     steps:
       - name: 📋 Show Context Info
         run: |
