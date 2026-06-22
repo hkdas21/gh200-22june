@@ -17,7 +17,4 @@ jobs:
 
       - name: Generate ASCII Art
         run: |
-          sudo apt-get install -y figlet
-          figlet "GH-200 Cohack"
-          echo "------------------------------"
-          figlet -f digital "GitHub Actions"
+          ./scripts/greet.sh
